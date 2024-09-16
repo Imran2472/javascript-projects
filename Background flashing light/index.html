@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Background Color Changer on Click</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none !important;
+            text-transform: capitalize;
+
+        }
+        html{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        body{
+            background: #212121;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .card{
+            padding: 1.5rem 2rem;
+        }
+        .card h1{
+            font-size: 1.8rem;
+            font-weight: bolder;
+            margin-bottom: .5rem;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <h1>Background color changer on click try it !!!</h1>
+                <button class="btn btn-success click_button my-1">click me</button>
+                <button class="btn btn-success close_button">close me</button>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+    
+
+    <script>
+
+        let button = document.querySelector(".click_button");
+        let closeBtn = document.querySelector(".close_button");
+
+       let CreatedColor = () =>{
+             let hex = "0123456789ABCDEF"
+             let color = "#"
+
+             for(let i = 0; i < 6; i++){
+                color += hex[Math.floor(Math.random() * 6)]
+             }
+             console.log(color)
+             return color;
+       }
+     
+       let ClearTime;
+
+       let  StartColor = () =>{
+        let body = document.querySelector("body")
+        let tagNew = document.createElement('h3')
+        ClearTime = setInterval(()=>{
+           body.style.background = CreatedColor();
+        },1000)
+       }
+
+       let CloseColor = () =>{
+        clearInterval(ClearTime)
+       }
+       
+       button.addEventListener("click", StartColor)
+       closeBtn.addEventListener("click", CloseColor)
+
+    </script>
+  </body>
+</html>

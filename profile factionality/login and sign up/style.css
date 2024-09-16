@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: #cff4fc;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.card{
+    padding: 1.4rem 2rem;
+}
+.center{
+    text-align: center;
+    margin: .8rem 0;
+}
+h1{
+    text-align: center;
+    padding: .4rem 0;
+}
+.loginbtn{
+    padding: .6rem;
+    font-size: 1.2rem;
+}
+.dont-acc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    margin: .6rem 0;
+}
+.dont-acc p{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+}
+.dont-acc span{
+    color: #0d6efd;
+    cursor: pointer;
+}
+.orline{
+    width: 100%;
+    height: 3px;
+    background: #dadde1;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+.orline::after{
+    content: 'or';
+    background: #fff;
+    padding: .1rem 1.6rem;
+    position: absolute;
+    top: -.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212121;
+    text-transform: lowercase !important;
+    border-radius: 5rem 5rem 3rem 3rem;
+}
+.fb-btn,
+.gmail-btn{
+    width: 100%;
+    margin-top: .8rem;
+    padding: .4rem 2rem;
+    border: 1px solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border-radius: .6rem;
+    cursor: pointer;
+}
+.gmail-btn:hover{
+    background-color: #e7e8e8;
+}
+.fb-btn:hover{
+    background: #294782;
+}
+.fb-btn{
+    background: #385898;
+    margin-top: 2rem;
+
+}
+.fb-btn .icon-fb{
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fb-btn .icon-fb i{
+    font-size: 1.2rem;
+}
+.fb-btn a{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+.gmail-btn .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gmail-btn .icon i{
+    font-size: 1.2rem;
+
+}
+.gmail-btn a{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+}
+.pass-eye{
+    position: relative;
+}
+.password-feild .eye:hover{
+    background: #e7e8e8;
+   
+}
+.password-feild .eye i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+.password-feild .eye{
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pass-eye:valid ~.eye i{
+    display: block;
+}
+.col-md-6.signup{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+.col-md-6.signup.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.col-md-6.login.active{
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+.container{
+    position: relative;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: rgba(3, 3, 3, 0.5);
+    backdrop-filter: blur(1rem);
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container .row .col-md-4{
+    padding:1rem;
+}
+.container .row .col-md-4 .card{
+    padding: 2rem 1.5rem;
+}
+.container .row .col-md-4 .card .icon{
+    width: 60px;
+    height: 60px;
+    background: rgb(170,234,104);
+    background: linear-gradient(0deg, rgba(170,234,104,1) 0%, rgba(253,216,45,1) 100%);
+    border-radius: .4rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.container .row .col-md-4 .card .icon i{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.container .row .col-md-4 .card .icon.design{
+    background: rgb(140,50,1);
+background: linear-gradient(90deg, rgba(140,50,1,0.6728816526610644) 0%, rgba(217,119,6,1) 47%, rgba(255,150,121,0.5104166666666667) 100%);
+}
+.container .row .col-md-4 .card .icon.data-base{
+    background: rgb(237,78,242);
+    background: linear-gradient(90deg, rgba(237,78,242,0.5160189075630253) 21%, rgba(252,17,255,0.586046918767507) 47%, rgba(235,34,224,0.5104166666666667) 82%);
+}
+.container .row .col-md-4 .card h4{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #212121;
+    margin-top: .8rem;
+}
+.container .row .col-md-4 .card p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0,0,0,.5);
+}
+.container .row .col-md-4 .card .button .btn{
+    text-transform: capitalize !important;
+}
+.web-deve{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.3);
+    transition: .3s ease;
+}
+.web-deve.show{
+    top: 0;
+}
+.web-deve.show .container .card{
+    top: 0;
+}
+.web-deve .container .card{
+    padding: 2rem;
+    width: 50%;
+    height: max-content;
+    /* text-align: center; */
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: -100%;
+    transition: .7s ease;
+    transition-delay: 4s ease;
+}
+.web-deve .container .card h1{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    color: #212121;
+}
+.web-deve .container .card p{
+    color: rgb(0,0,0,.5);
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+}
+.web-deve .container .card ul li{
+    text-align: left;
+    list-style-type:decimal-leading-zero;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #212121;
+}
+.web-deve .container .card .button .close-popup{
+    width: 100%;
+}

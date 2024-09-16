@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header .main{
+     width: 50%;
+     border-left: 4px dotted #26af00;
+     border-right: 4px dotted #4e0085;
+     border-top: 4px dotted #b5064c;
+     border-bottom: 4px dotted #e4ca07;
+     text-align: center;
+     box-shadow: 0 .5rem 5rem 1rem rgba(10, 242, 219, 0.5);
+     color: #fff;
+     padding: 1rem;
+}
+header .main h1{
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+header .main h3{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: .6rem 0;
+}
+header .main .inputs-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+header .main .inputs-flex .text{
+    /* border: 2px solid red; */
+    flex-basis: 15%;
+}
+header .main .inputs-flex .text input{
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: .4rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}

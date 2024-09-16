@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    border: none;
+    outline: none;
+    text-transform: capitalize !important;
+
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #212121;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+#translate_sec{
+    width: 100%;
+}
+#translate_sec .container .row .col-md-6{
+    padding: 0;
+}
+#translate_sec .container .row .col-md-6 .card{
+    background: transparent;
+    padding: 1rem;
+    background:#fff;
+    margin: 0;
+}
+#translate_sec .container .row .col-md-6 .card textarea{
+    border: .1rem solid rgba(0,0,0,.2);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+    background: rgba(255,255,255,.8);
+    width: 100%;
+    resize: none;
+    border-bottom: none;
+    padding: 1rem;
+}
+#translate_sec .container .row .col-md-6 .card #text1{
+    border-right: none;
+}
+#translate_sec .container .row .col-md-6 .card .text_flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#translate_sec .container .row .col-md-6 .card .content{
+    display: grid;
+    grid-template-columns: 200px 110px 200px;
+    justify-content: space-between;
+    align-items: center;
+    border: .1rem solid rgba(0,0,0,.2);
+    padding: .5rem;
+    background: rgba(255,255,255,.8);
+}
+#translate_sec .container .row .col-md-6 .card .content .left_side{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+#translate_sec .container .row .col-md-6 .card .content .left_side select{
+    border: .1rem solid rgba(0,0,0,.2);
+    background: transparent;
+    padding: .2rem;
+    text-transform: capitalize;
+    width: 120px;
+
+}
+#translate_sec .container .row .col-md-6 .card .content .left_side .left_mic{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #000;
+}
+#translate_sec .container .row .col-md-6 .card .content .left_side .left_copy{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #000;
+}
+#translate_sec .container .row .col-md-6 .card .content .middle{
+   text-align: center;
+}
+#translate_sec .container .row .col-md-6 .card .content .middle i{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #000;
+}
+#translate_sec .container .row .col-md-6 .card .content .last{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .8rem;
+}
+#translate_sec .container .row .col-md-6 .card .content .last select{
+    border: .1rem solid rgba(0,0,0,.2);
+    background: transparent;
+    padding: .2rem;
+    text-transform: capitalize;
+    width: 120px;
+}
+#translate_sec .container .row .col-md-6 .card .content .last .right_mic{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #000;
+}
+#translate_sec .container .row .col-md-6 .card .content .last .right_copy{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #000;
+}
+#translate_sec .container .row .col-md-6 .card .btnn .button{
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(62,87,223);
+background: linear-gradient(90deg, rgba(62,87,223,1) 0%, rgba(7,37,122,1) 49%, rgba(32,90,165,1) 100%);
+padding: .5rem 2rem;
+width:100%;
+
+}
+#translate_sec .container .row .col-md-6 .card .btnn{
+    width: 100%;
+margin-top: 1rem;
+}

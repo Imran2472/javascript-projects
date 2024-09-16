@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Background | Color Generater App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="min.js" defer></script>
+  </head>
+  <body>
+
+    <section id="color-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="main-color"></div>
+                        <div class="list-and-color">
+                            <div class="list">
+                                <h4>direction</h4>
+                                <select name="" id="selected">
+                                    <option value="to top">top</option>
+                                    <option value="to right top">right top</option>
+                                    <option value="to right">right</option>
+                                    <option value="to right bottom">right bottom</option>
+                                    <option value="to bottom">bottom</option>
+                                    <option value="to left bottom">left bottom</option>
+                                    <option value="to left">left</option>
+                                    <option value="to left top">left top</option>
+                                </select>
+                            </div>
+                            <div class="color">
+                                <h4>color</h4>
+                                <input type="color" class="color">
+                                <input type="color" class="color">
+                            </div>
+                           
+                        </div>
+                        <div class="color-code">
+                            <textarea name="" id="" value="background : linear-gradient(to left top, #f4f4f4, #0f0f0f);" disabled>background : linear-gradient(to left top, #f4f4f4, #0f0f0f);</textarea>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn refresh">refresh color</button>
+                            <button class="btn copy-code">copy code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  </body>
+</html>

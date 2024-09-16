@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e083708111.js" crossorigin="anonymous"></script>
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    
+    <!-- --navbar wrapper-- -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3 fw-bold text-white" href="#">imran khan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">our work</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ----popup modals-- -->
+    <section id="modals">
+      <div class="container-fluid">
+        <form action="#" autocomplete="off">
+          <div class="header d-flex justify-content-between bg-primary p-2 align-items-center">
+            <h4 class="text-white m-0">code with imran</h4>
+            <button class="btn btn-danger" id="closebtn"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3 mt-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">mobile</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">date of brith</span>
+            <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">password</span>
+            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+          <!-- inputs wrapper  -->
+          <div class="input-group mb-3">
+            <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="buton justify-content-end d-flex">
+            <button type="submit" class="btn btn-danger m-1 form-edite">edite data</button>
+            <button type="submit" class="btn btn-primary m-1 Enter-btn">Enter Data now</button>
+        </div>
+
+        </form>
+      </div>
+    </section>
+  
+    <!-- -----main content wrapper--  -->
+    <section id="products" class="mt-5">
+      <div class="container-fluid">
+        <h4 class="text-primary text-center fs-1 fw-bold rounded">javascript crud operation</h4>
+        <div class="row bg-light rounded mt-3 row-col border border-1" style="padding: .8rem 1rem 2rem .8rem;">
+
+    <div class="col bg-primary p-2 rounded d-flex justify-content-between align-items-center">
+  
+              <div class="heading fs-3 fw-bold text-white">code with imran</div>
+
+              <div class="search-div  d-flex justify-content-center align-items-center gap-2">
+                <div class="col">
+                  <input type="search" class="form-control" placeholder="search here..." aria-label="search">
+                </div>
+                <button class="btn btn-danger" type="button"><i class="fa-solid fa-minus"></i> <span>delet all</span></button>
+                <button class="btn btn-success" id="addnew"><i class="fa-solid fa-plus"></i> <span>add new email</span></button>
+              </div>
+
+    </div>
+
+          <div class="col mt-4 fw-lighter fs-6 border border-bottom-1 border-top-0 border-start-0 border-end-0 p-3 col-style fw-bold">
+            <div class="sr-number box text-center">sr</div>
+            <div class="profile box text-center">profile</div>
+            <div class="name box text-center">name</div>
+            <div class="email box text-center">email</div>
+            <div class="mobile box text-center">mobile</div>
+            <div class="date box text-center">date of brith</div>
+            <div class="action box text-center">action</div>
+          </div>
+<div class="data-main d-flex flex-column" style="width: 100%;" id="main-item">
+         
+        </div>
+
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

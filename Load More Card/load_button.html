@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>load button preview with javascript</title>
+    <style>
+        .main .buttons{
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .row{
+            padding: 0 4rem;
+        }
+        .col-md-4{
+            display: none;
+            padding: .8rem;
+        }
+        .col-md-4:nth-child(1){
+            display: block;
+        }
+        .col-md-4:nth-child(2){
+            display: block;
+        }
+        .col-md-4:nth-child(3){
+            display: block;
+        }
+        .loading{
+          display: block;
+          height: 40px;
+          width: 40px;
+          /* margin: 0 auto; */
+          /* animation: loader1  3s linear infinite; */
+          overflow: hidden;
+          position: relative;
+          display: none;
+        }
+        /* @keyframes loader1{
+          from{
+            transform: rotate(0deg);
+          }
+          to{
+            transform: rotate(360deg);
+          }
+        } */
+    .loading span{
+        position: absolute;
+        display: block;
+    }
+    .loading span:nth-child(1){
+      top: 0;
+      left: -100;
+      width: 100%;
+      height: 10px;
+      background: red;
+      animation: animate1 1s linear infinite;
+      animation-delay: 0s;
+
+    }
+    @keyframes animate1{
+      0%{
+        left: -100%;
+      }
+      100%{
+        left: 100%;
+      }
+    }
+
+    .loading span:nth-child(3){
+      bottom: 0;
+      left: -100;
+      width: 100%;
+      height: 10px;
+      background: red;
+      animation: animate3 1s linear infinite;
+      animation-delay: 0s;
+    }
+    @keyframes animate3{
+      0%{
+        left: 100%;
+      }
+      100%{
+        left: -100%;
+      }
+    }
+    .loading span:nth-child(2){
+      right: 0;
+      top: -100%;
+      width: 10px;
+      height: 100%;
+      background: red;
+      animation: animate2 1s linear infinite;
+      animation-delay: 0s;
+    }
+    @keyframes animate2{
+      0%{
+        top: -100%;
+      }
+      100%{
+        top: 100%;
+      }
+    }
+    .loading span:nth-child(4){
+      left: 0;
+      bottom: -100%;
+      width: 10px;
+      height: 100%;
+      background: red;
+      animation: animate4 1s linear infinite;
+      animation-delay: 0s;
+    }
+    @keyframes animate4{
+      0%{
+        bottom: -100%;
+      }
+      100%{
+        bottom: 100%;
+      }
+    }
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn{
+      text-align: center;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
+</head>
+<body>
+    
+<section class="loaded">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+                <div class="col-md-4">
+                   <div class="card">
+  <img src="images/02.jpeg" class="card-img-top" alt="images/02.jpeg">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+       <div class="buttons"> <button type="button" class="btn btn-primary" id="btn">learn more
+        <span class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        
+        </span>
+       </button></div>
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+
+    let col = document.querySelectorAll('.col-md-4');
+    let button = document.querySelector('#btn');
+
+    currentItem = 3;
+
+    button.addEventListener('click', function(){
+        for(let i = currentItem; i < currentItem + 3; i++){
+            if(col[i]){
+                col[i].style.display = 'block';
+            }
+        }
+        currentItem += 3;
+        if(currentItem>=col.length){
+            event.target.style.display = 'none';
+        }
+    })
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

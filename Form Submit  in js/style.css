@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    
+font-family: 'Roboto', sans-serif;
+background-color: #f6f6f6;
+}
+::-webkit-scrollbar{
+    width: .5rem;
+    background: #FBC323;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(21,21,21);
+}
+.header{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    background: white;
+}
+.parent{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+}
+.logo  img{
+    width: 250px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar ul li a{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+
+}
+.navbar ul li a:hover{
+    color: #FBC323;
+}
+#hero{
+    padding: 5rem 0;
+}
+#hero .container .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 0 6rem;
+    grid-gap: 1.4rem;
+}
+#hero .container .row .col img{
+    width: 100%;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+}
+#hero .container .row .col .intro{
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #FBC323;
+}
+#hero .container .row .col h1{
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
+}
+#hero .container .row .col span{
+    color: #FBC323;
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+#hero .container .row .col .para{
+    font-size: 16px;
+    color: #4d4545;
+    font-weight: 400;
+
+}
+.button{
+    margin-top: 24px;
+}
+#hero .container .row .col .button a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212121;
+    padding: .6rem 1.7rem;
+    border-radius: .6rem;
+    background-color: #FBC323;
+    margin-top: 20PX;
+}
+
+
+
+.form-container{
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container form .heading{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.container form{
+    border: 1px solid red;
+    width: 50%;
+    padding: 1rem 2rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.101);
+}
+.wrn-alert{
+    display: none;
+}
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}

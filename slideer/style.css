@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: rgb(0,0,0) !important;
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%) !important;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 0;
+}
+
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 85vh;
+    position: relative;
+}
+.slider .container .row .col{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    clip-path: circle(0% at 4% 50%);
+}
+
+.slider .container .row .col.active{
+    clip-path: circle(150% at 2% 50%);
+    z-index: 2;
+    transition: 0.5s ease;
+}
+.slider .container .row .col .card{
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.2);
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.slider .container .row .col .card img{
+    width: 100%;
+    height: 100%;
+}
+.slider .container .row .col .card .layer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+.slider .container .row .col .card .text_heading{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.slider .container .row .col .card .pera{
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    z-index: 1;
+    background: rgba(255,255,255,.5);
+    padding: 1rem;
+    width: 50%;
+}
+.slider .container .row .col .card .pera p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+.slider .container .row .pignations{
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+.slider .container .row .pignations .btns{
+    width: 18px;
+    height: 18px;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+}
+.slider .container .row .pignations .btns.active{
+    background: rgb(33,93,147);
+background: linear-gradient(0deg, rgba(33,93,147,1) 4%, rgba(25,65,181,1) 49%, rgba(19,70,135,1) 98%);
+transition: 0.5s ease;
+}

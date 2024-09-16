@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Css Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/fav_icone.jpg">
+</head>
+<body>
+    
+<header class="header">
+    <nav>
+
+        <div class="logo">
+            <a href="#">codewithimran</a>
+        </div>
+
+        <div class="navbar">
+            <a href="">home</a>
+            <a href="">courses</a>
+            <a href="">tutorial</a>
+            <a href="">blogs</a>
+            <a href="">notes</a>
+            <a href="">contact</a>
+            <a href="">my gear</a>
+            <a href="" class="button">log in</a>
+            <a href="" class="button">sign up</a>
+        </div>
+
+
+
+    </nav>
+</header>
+
+<section class="anathoer_nav">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="col">
+                <a href="#">HTML</a>
+                <a href="#">css</a>
+                <a href="#">js</a>
+                <a href="#">c</a>
+                <a href="#">python</a>
+                <a href="#">c++</a>
+                <a href="#">java</a>
+                <a href="#">php</a>
+                <a href="#">react.js</a>
+            </div>
+            <div class="col last_colum">
+                <form action="#">
+                    <div class="inputs">
+                        <input type="search" placeholder="search_here" class="search">
+                        <label for="search" class="label_search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h1>Welcome to <span>CodeWithimran
+                        </span></h1>
+                        <div class="typin_animation">
+                            <span class="frist">Learn</span>
+                            <span class="second"> </span>
+                            
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae, repellendus commodi itaque provident atque, quaerat vel perspiciatis, enim doloribus odio eos necessitatibus praesentium veritatis.</p>
+                        <div class="button">
+                            <a href="#">Free course</a>
+                            <a href="#">explore blogs</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/fav_icone.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="curser"></div>
+</section>
+
+
+
+
+
+
+<script>
+    let search = document.querySelector('.search')
+    let label = document.querySelector('.label_search')
+    let input = document.querySelector('.inputs')
+
+    label.addEventListener('click', function(){
+        search.classList.toggle('active')
+        input.classList.toggle('active')
+    })
+
+    let second = document.querySelector('.second')
+
+    let MyArry = ['C Programming', 'python', 'Java Script', 'Machine Learning', 'Data Science', 'Web Development', 'C++', 'web designing', 'front-end developer'];
+
+    let arryIndex = 1;
+    function TextReplace(){
+
+        setInterval(timer, 3000);
+        function timer(){
+            if(arryIndex < MyArry.length){
+                second.innerHTML = MyArry[arryIndex];
+                arryIndex = arryIndex + 1;
+            }
+            else{
+                arryIndex = 0;
+                second.innerHTML = MyArry[arryIndex];
+                arryIndex =arryIndex + 1;
+            }
+        }
+
+    }
+
+    TextReplace()
+
+
+let curser = document.querySelector('.curser');
+let timeout;
+
+document.addEventListener('mousemove', (e) =>{
+    let x = e.pageX;
+    let y = e.pageY;
+
+    curser.style.top = y + 'px';
+    curser.style.left = x + 'px';
+    curser.style.display = 'block';
+
+    function mouseStop(){
+        curser.style.display = 'none';
+    }
+    clearTimeout(mouseStop)
+    timeout = setTimeout(mouseStop, 1000)
+
+});
+document.addEventListener('mouseout', () =>{
+    curser.style.display = 'none';
+})
+
+
+
+//    let textLoaded = () =>{
+//     setTimeout(() =>{
+//             second.textContent = 'C Programming';
+//         }, 0);
+//     setTimeout(() =>{
+//             second.textContent = 'Python';
+//         }, 4000);
+//     setTimeout(() =>{
+//             second.textContent = 'Java Script';
+//         }, 8000);
+//     setTimeout(() =>{
+//             second.textContent = 'Machine Learning';
+//         }, 12000);
+//     setTimeout(() =>{
+//             second.textContent = 'Data Science';
+//         }, 16000);
+//     setTimeout(() =>{
+//             second.textContent = 'Web Development';
+//         }, 20000);
+//     setTimeout(() =>{
+//             second.textContent = 'C++';
+//         }, 24000);
+//    }
+
+//    textLoaded();
+// setInterval(textLoaded, 28000)
+
+
+</script>
+
+</body>
+</html>

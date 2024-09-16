@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Password Generation App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js " defer></script>
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="main_box">
+                <div class="box">
+                    <!-- heading text  -->
+                    <h5 class="p-2 text-center fs-3 fw-semibold">Password Generater</h5>
+                    <!-- input password Generater   -->
+                    <div class="input d-flex justify-content-between align-items-center gap-2">
+                        <input type="text" class="input_field">
+                        <button class="btn buttons" id="copy">Copy</button>
+                    </div>
+                  <div class="options d-flex gap-2 flex-column">
+                      <!-- options checkbox  -->
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <label for="Length" class="fs-5 fw-semibold curser">Length</label>
+                        <input type="number" class="number w-5 border border p-2" id="Length">
+                    </div>
+                    <!-- options checkbox  -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label for="Uppercase" class="fs-5 fw-semibold curser">Uppercase</label>
+                        <input type="checkbox" class="checkbox" id="Uppercase">
+                    </div>
+                    <!-- options checkbox  -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label for="Lowercase" class="fs-5 fw-semibold curser">Lowercase</label>
+                        <input type="checkbox" class="checkbox" id="Lowercase">
+                    </div>
+                    <!-- options checkbox  -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label for="numbers" class="fs-5 fw-semibold curser">numbers</label>
+                        <input type="checkbox" class="checkbox" id="numbers">
+                    </div>
+                    <!-- options checkbox  -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label for="sybmols" class="fs-5 fw-semibold curser">sybmols</label>
+                        <input type="checkbox" class="checkbox" id="sybmols">
+                    </div>
+                  </div>
+                    <button class="btn buttons w-100 mt-2" id="submit">Generat Now</button>
+                </div>
+        </div>
+    </div>
+    
+  </body>
+</html>

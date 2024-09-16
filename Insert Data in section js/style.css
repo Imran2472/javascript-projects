@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container-fluid{
+    padding: 0 6rem;
+}
+.text-large{
+    font-size: 1.4rem;
+}
+#modals{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.1);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: .4s ease;
+    z-index: 1000;
+    transition-delay: .3s;
+}
+#modals.show{
+top: 0;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+#modals .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modals .container-fluid form{
+    background: #fff;
+    padding: 1.2rem 1.8rem;
+    width: 60%;
+    transition-delay: .5s;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.row-col{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.col-style{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 100px 200px 180px 230px 150px 180px 180px;
+    align-items: center;
+}
+/* .box{
+    border: 1px solid red;
+} */
+.color-bg{
+    background: #DEE2E6;
+    z-index: 999;
+
+}
+
+.form-edite{
+    pointer-events: none;
+    opacity: .4;
+}
+.disabled{
+    pointer-events: none;
+    opacity: .4;
+}

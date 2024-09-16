@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: "Laila", serif;
+    background: #f3f3f3;
+}
+.container{
+    padding: 18.5rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .input{
+    width: 50%;
+}
+.container .input input{
+    width: 100%;
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    border-radius: .7rem;
+}
+.container .input .flex{
+    position: relative;
+}
+.container .input .flex .eye{
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+}
+.container .input .flex .eye i{
+    font-size: 1rem;
+    cursor: pointer;
+    color: #000;
+}
+.masg{
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.btn{
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: blue;
+    color: #fff;
+}

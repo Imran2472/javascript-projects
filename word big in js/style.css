@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f0f0f0;
+    font-family: "Laila", serif;
+}
+.container{
+    padding: 13rem 0;
+}
+.container .text span{
+    font-size: 8rem;
+    font-weight: 900;
+    display: inline-block;
+    cursor: pointer;
+    transition: 1s linear;
+
+}
+.container .text span.active{
+    animation: jump 2s ease-in-out;
+}
+@keyframes jump{
+    0%{
+        transform: translate(0,0) rotate(180deg);
+    }
+    100%{
+        transform: scale(2.5) translate(0,-180px);
+    }
+}

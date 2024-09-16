@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #212121;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container .row .col-md-4 .card{
+    background: transparent;
+    position: relative;
+    background-image: url("images/hero-banner-1.jpg");
+    width: 100%;
+    height: 34rem;
+    /* padding: 150px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+.container .row .col-md-4 .card .heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0;
+
+}
+
+.container .row .col-md-4 .card .heart.active{
+    animation: animate .8s linear infinite;
+}
+
+@keyframes animate {
+    30%{
+        opacity: 1;
+        font-size: 3.7rem;
+    }
+    50%{
+        opacity: 1;
+        font-size: 3rem;
+    }
+    70%{
+        opacity: 1;
+        font-size: 3.4rem;
+    }
+    90%{
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+.container .row .col-md-4 .card .heart i{
+    font-size: 2.5rem;
+    color: rgb(255, 30, 30);
+    transition: all .4s linear;
+}
+.container .row .col-md-4 .card img{
+    width: 100%;
+    border-radius: .6rem;
+    cursor: pointer;
+}
+.container .row .col-md-4 .card .overlay{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

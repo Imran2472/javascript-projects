@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    border: none;
+    outline: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+background: rgba(1, 6, 17, 0.632);
+font-family: "Laila", serif;
+}
+.main{
+
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.container{
+    padding: 4rem 20rem;
+}
+.container h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+}
+.container .box_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1.5rem;
+}
+.container .box_container .box{
+    width: 100%;
+}
+.container .box_container .box button{
+    width: 100%;
+    height: 7rem;
+    font-size: 5rem;
+    background: #fff;
+    color: #444444;
+    font-weight: 600;
+    border-radius: 1rem;
+}
+.msg{
+    padding: 15rem 0;
+    text-align: center;
+    display: none;
+}
+.msg.show{
+    display: block;
+}
+.msg .winner{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+}

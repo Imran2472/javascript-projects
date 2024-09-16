@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f9f9e6;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container .row .col-md-4 .card{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.container .row .col-md-4 .card .card-ineer{
+    width: 100%;
+    height: 14rem;
+    border: .2rem dotted rgb(75, 75, 245);
+    display: grid;
+    place-items: center;
+    padding: 1.4rem;
+    position: relative;
+    overflow: hidden;
+
+}
+.container .row .col-md-4 .card .card-ineer.active{
+    border: none;
+}
+.container .row .col-md-4 .card .disc .icon i{
+    font-size: 5rem;
+    cursor: pointer;
+    color: rgb(75, 75, 245);
+}
+.container .row .col-md-4 .card .disc .text{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #5d5d5c;
+    margin-top: .5rem;
+}
+.container .row .col-md-4 .card .disc .text-sec{
+    margin-top: .2rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #5d5d5c;
+}
+.container .row .col-md-4 .card .disc p{
+    font-size: .9rem;
+    color: #5d5d5c;
+}
+.container .row .col-md-4 .card .img-sec{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.container .row .col-md-4 .card .img-sec img{
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+}
+.container .row .col-md-4 .card .card-body{
+    width: 100%;
+    padding: 1rem 0;
+}
+.container .row .col-md-4 .card .card-body .btn-with{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background: rgb(75, 75, 245);
+    color: #fff;
+    padding: .6rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.container .row .col-md-4 .card .card-body .btn-with:hover{
+    background: rgb(33, 33, 104);
+}
+.loader{
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top: 3px solid #ffff;
+    animation: load1 1s ease infinite;
+    transition: all .3s ease;
+}
+@keyframes load1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#myfile{
+    display: none;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    visibility: hidden;
+    transition: .4s ease;
+}
+.popup.active{
+    transform: scale(1);
+    visibility: visible;
+}
+.popup .container .popup-main{
+    width: max-content;
+    border: 1px solid black;
+    padding: 1.2rem 1.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    transition-delay: .6s ease;
+}
+.popup .container .popup-body p{
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bolder;
+}
+.popup .container .buttonclose button{
+    padding: .6rem 1.6rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #000;
+}

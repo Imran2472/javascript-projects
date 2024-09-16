@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Random num Generation game | lets start</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            text-transform: capitalize;
+
+        }
+        html{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        body{
+            background: #212121;
+            font-family: 'Poppins', sans-serif;
+        }
+        .game{
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .game .container-fluid .row .colum{
+            padding: 0;
+        }
+        .game .container-fluid .row .colum .card{
+            padding: 1.4rem 2rem;
+        }
+        .game .container-fluid .row .colum .card h2{
+            font-size: 2rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #212121;
+        }
+        .game .container-fluid .row .colum .card p{
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #212121;
+        }
+        .game .container-fluid .row .colum .card h1{
+            font-size: 2.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #212121;
+        }
+        .game .container-fluid .row .colum .card form #guessnumber{
+            width: 100%;
+            padding: .4rem;
+            background: rgba(0,0,0,.2);
+            color: #000000;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: .5rem 0;
+            border-radius: .8rem;
+        }
+        .game .container-fluid .row .colum .card form #submit{
+            font-size: 1rem;
+            font-weight: 600;
+            padding: .5rem 2rem;
+            color: #fff;
+            background: #212121;
+            margin: .5rem 0;
+            border-radius: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <section class="game">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 colum">
+                    <div class="card">
+                        <h2>Number guessing game</h2>
+                        <p>try and guess a random number between 1 and 100</p>
+                        <p>we have 10 attempts to guess the right number</p>
+                        <h1>guess a number</h1>
+                        <form action="" autocomplete="off">
+                            <input type="text" name="text" id="guessnumber" required>
+                            <input type="submit" name="submit" id="submit" value="submit">
+                        </form>
+                        <div class="resultpass">
+                        <p>previous guesses <span class="guesses"></span></p>
+                        <p>guesses remaining  <span class="lastresult">10</span></p>
+                        <p class="loworhi"></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        let randomNumber = parseInt(Math.random() * 100 + 1);
+        console.log(randomNumber)
+        let submitBtn = document.querySelector('#submit')
+        let UserInput = document.querySelector('#guessnumber')
+        let guesses = document.querySelector('.guesses')
+        let lastresult = document.querySelector('.lastresult')
+        let loworhi = document.querySelector('.loworhi')
+        let resultpass = document.querySelector('.resultpass')
+
+        let p = document.createElement('p')
+        let prevguess = []
+        let count = 1
+
+        let playGame = true;
+
+        if(playGame){
+            submitBtn.addEventListener('click', function(e){
+                e.preventDefault();
+                let guess = parseInt(UserInput.value)
+                console.log(guess)
+                validateguess(guess);
+            })
+        }
+        let validateguess = (guess) =>{
+          if(isNaN(guess)){
+                alert("please add enter a valid number");
+          }
+           else if(guess < 1 ){
+                alert("please add enter a number more than 1");
+            }
+           else if(guess > 100 ){
+                alert("please add enter a  number less than 100");
+            }
+          else{
+                prevguess.push(guess)
+                if(count === 11){
+                    displayGuess(guess);
+                    displayMessage(`Game Over, Random Number Was ${randomNumber}`);
+                    endGame();
+                }else{
+                    displayGuess(guess);
+                    checkGuess(guess);
+                }
+            }
+        }
+
+        let checkGuess = (guess) =>{
+         if(guess === randomNumber){
+            displayMessage(`you gussed it right`)
+         }   
+         else if(guess < randomNumber){
+                displayMessage(`Number is Too Low`)
+         }
+         else if(guess > randomNumber){
+                displayMessage(`Number is Too high`)
+         }
+        }
+        let displayMessage = (message) =>{
+            loworhi.innerHTML = `<h3>${message}</h3>`
+        }
+
+        let displayGuess = (guess) =>{
+            UserInput.value = '';
+            guesses.innerHTML += `"${guess}",`;
+            count++
+            lastresult.innerHTML = `${11 - count}`
+        }
+
+
+        let newGamge = (guess) =>{
+            let NewGameBtn = document.querySelector('.buttons')
+            NewGameBtn.addEventListener('click', function(e){
+                let randomSecondNum = parseInt(Math.random() * 100 + 1);
+                prevguess =[]
+                count = 1;
+            guesses.innerHTML = ``;
+            lastresult.innerHTML = `${11 - count}`
+                UserInput.removeAttribute('disabled')
+            resultpass.removeChild(p);
+            loworhi.innerHTML = `<h2></h2>`
+                playGame = true;
+            })
+        }
+
+
+        let endGame = (guess) =>{
+            UserInput.value = '';
+            UserInput.setAttribute('disabled', '')
+            p.classList.add('button')
+            p.innerHTML = `<button class="btn btn-primary buttons">Start New Game</button>`;
+            resultpass.appendChild(p);
+            playGame = false
+            newGamge()
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

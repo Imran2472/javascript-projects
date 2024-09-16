@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    padding: 8rem;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/0.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  transition: 1s ease;
+
+}
+.title,
+.pera{
+    transition: 1s ease;
+}

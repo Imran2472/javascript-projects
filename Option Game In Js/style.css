@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f0f0f0;
+    font-family: "Laila", serif;
+}
+.container{
+    padding: 8rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .game_box{
+    width: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1.4rem 2rem;
+    border-radius: .6rem;
+}
+.container .game_box .options .option{
+    display: flex;
+    gap: 1rem;
+    /* align-items: center; */
+}
+.container .game_box .options .option input{
+    border: 1px solid red;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+    margin: 1rem 0;
+}
+
+.container .game_box .options .option label{
+    margin-top: .7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6C757D;
+    cursor: pointer;
+}
+.container .game_box .options .option label:hover{
+    color: #33383b;
+
+}

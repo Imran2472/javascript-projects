@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e083708111.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>YouTube</title>
+    <link rel="icon" href="images/fav.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="index.js" defer></script>
+  </head>
+  <main class="main-tag"> 
+
+    <!-- ---------------- navbar content wrapper ------------------- -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="burger-menu">
+                    <i class="fa-solid fa-bars" id="menu"></i>
+                </div>
+                <span><img src="images/youtube logo.png" alt=""></span>
+            </div>
+            <div class="searching">
+            <div class="searchbar">
+                <input type="search" placeholder="search" id="search"/>
+                <label for="option1"><i class="fa-solid fa-magnifying-glass"></i></label>
+            </div>
+            <div class="mic"><i class="fa-solid fa-microphone"></i></div>
+        </div>
+            <div class="sign">
+                <div class="dot"><i class="fa-solid fa-ellipsis-vertical"  id="three-dot"></i></div>
+                <div class="text">
+                    <span class="user"><i class="fa-regular fa-user"></i></span>
+                    <p>sign up</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- -------side navbar content wrapper-------- -->
+    <section id="sidebar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <!-- -----logo----- -->
+                    <div class="logo">
+                        <div class="icon" id="close"><i class="fa-solid fa-bars"></i></div>
+                        <div class="image"><img src="images/youtube logo.png" alt=""></div>
+                    </div>
+                    <!-- ----home navbar------ -->
+                    <div class="link-wrapper">
+                    <div class="links">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-house"></i><span>home</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-video"></i><span>shorts</span></a></li>
+                            <li><a href="#"><ion-icon name="albums-outline" class="icon-ions"></ion-icon><span>subscriptions</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- second links -->
+                    <div class="links links-two">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i><span>you</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i><span>history</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- third links -->
+                    <div class="links discription link-three">
+                       <div class="pera">Sign in to like videos, comment and subscribe.
+                    </div>
+                    <div class="text">
+                        <span class="user"><i class="fa-regular fa-user"></i></span>
+                        <p>sign up</p>
+                    </div>
+                    </div>
+                      <!-- ----fourth links------ -->
+                      <div class="links fourth-links">
+                        <h4>explore</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-fire"></i><span>trending</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-music"></i><span>music</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-gamepad"></i><span>gaming</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-newspaper"></i><span>news</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-medal"></i><span>sports</span></a></li>
+                        </ul>
+                    </div>
+                      <!-- ----fourth links------ -->
+                      <div class="links fifth-link">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-plus"></i><span>browse channels</span></a></li>
+                        </ul>
+                    </div>
+                      <!-- ----fourth links------ -->
+                      <div class="links sixth">
+                        <h4>More from YouTube
+                        </h4>
+                        <ul>
+                            <li><a href="#"><img src="images/fav.png" alt=""><span>youtube premium</span></a></li>
+                            <li><a href="#"><img src="images/2.png" alt=""><span>youtube music</span></a></li>
+                            <li><a href="#"><img src="images/3.png" alt=""><span>youtube kids</span></a></li>
+                        </ul>
+                    </div>
+                      <!-- ----fourth links------ -->
+                      <div class="links seven">
+                        <ul>
+                            <li><a href="#"><i class="fa fas-solid fa-gear"></i><span>settings</span></a></li>
+                            <li><a href="#"><i class="fa fas-regular fa-flag"></i><span>report history</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-question"></i><span>help</span></a></li>
+                            <li><a href="#"><i class="fa-solid fa-message"></i><span>send feedback</span></a></li>
+                        </ul>
+                    </div>
+                      <!-- ----fourth links------ -->
+                      <div class="eight">
+                        <ul>
+                           <li><a href="#">about</a></li>
+                           <li><a href="#">press</a></li>
+                           <li><a href="#">copyright</a></li>
+                           <li><a href="#">contact us</a></li>
+                           <li><a href="#">creater</a></li>
+                           <li><a href="#">adverties</a></li>
+                           <li><a href="#">developers</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="#">team</a></li>
+                           <li><a href="#">privacy</a></li>
+                           <li><a href="#">policy & sefty</a></li>
+                           <li><a href="#">how youtube workers</a></li>
+                           <li><a href="#">test new feature</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----setting wrapper ----  -->
+    <section id="setting">
+        <div class="container-fluid">
+            <div class="settings">
+<ul>
+<li class="device-arrow"><a href="#"><i class="fa fas-duotone fa-user"></i><span>your data in youtube</span></a></li>
+<li class="chivron device-arrow"><a href="#"><i class="fa-regular fa-moon"></i><span>Appearance: Device theme</span><span class="device-arrow chivron"><i class="fa-solid fa-chevron-right"></i></span></a>
+</li>
+<li class="chivron eng-arrow"><a href="#"><i class="fa fas-thin fa-language"></i><span>Language:
+British English
+</span> <span class="eng-arrow chivron"><i class="fa-solid fa-chevron-right"></i></span></a></li>
+<li class="chivron restric-arrow"><a href="#"><i class="fa-solid fa-user-shield"></i><span>Restricted Mode: Off
+</span> <span class="restric-arrow chivron"><i class="fa-solid fa-chevron-right"></i></span></a></li>
+<li class="chivron location-arrow"><a href="#"><i class="fa-solid fa-globe"></i><span>Location:
+Pakistan
+</span> <span class="location-arrow chivron"><i class="fa-solid fa-chevron-right"></i></span></a></li>
+<li><a href="#"><i class="fa-solid fa-keyboard"></i><span>Keyboard shortcuts
+</span></a></li>
+</ul>
+<ul class="setting-icon">
+<li><a href="#"><i class="fa-solid fa-gear"></i><span>setting</span></a></li>
+</ul>
+<ul class="end-fotter">
+<li><a href="#"><i class="fa fas-light fa-circle-info"></i><span>help</span></a></li>
+<li><a href="#"><i class="fa fas-solid fa-message"></i><span>Send feedback
+</span></a></li>
+</ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------drop down section wrapper-------------- -->
+<section id="drop-area">
+<div class="container-fluid">
+<!-- --device dropdown-- -->
+<div class="dropdown" id="device-arrow">
+<div class="header">
+<i class="fa-solid fa-arrow-left"></i>
+<div class="heading">appearance</div>
+</div>
+<div class="info">
+<p>Setting applies to this browser only
+</p>
+</div>
+<ul>
+<li><a href="#">use device theme</a></li>
+<li><a href="#">dark theme</a></li>
+<li><a href="#">light theme</a></li>
+</ul>
+</div>
+
+<!-- second navbar  -->
+<!-- --device dropdown-- -->
+<div class="dropdown" id="eng-arrow">
+    <div class="header">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="heading">chose your language</div>
+    </div>
+    <ul>
+        <li><a href="#">Afrikaans</a></li>
+        <li><a href="#">Azərbaycan</a></li>
+        <li><a href="#">Bahasa Indonesia</a></li>
+        <li><a href="#">Bahasa Malaysia</a></li>
+        <li><a href="#">Bosanski</a></li>
+        <li><a href="#">Català</a></li>
+        <li><a href="#">Čeština</a></li>
+        <li><a href="#">Dansk</a></li>
+        <li><a href="#">Deutsch</a></li>
+        <li><a href="#">Eesti</a></li>
+        <li><a href="#">English (India)</a></li>
+        <li><a href="#">English (UK)</a></li>
+        <li><a href="#">English (US)</a></li>
+        <li><a href="#">Español (España)</a></li>
+        <li><a href="#">Español (Latinoamérica)</a></li>
+        <li><a href="#">Español (US)</a></li>
+        <li><a href="#">Euskara</a></li>
+    </ul>
+</div>
+
+<!-- third navbar  -->
+<!-- --device dropdown-- -->
+<div class="dropdown" id="restric-arrow">
+    <div class="header">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="heading">appearance</div>
+    </div>
+    <div class="info restric-info">
+        <p>This helps hide potentially mature videos. No filter is 100% accurate.
+        </p>
+        <p>This helps hide potentially mature videos. No filter is 100% accurate.
+            This setting only applies to this browser.</p>
+    </div>
+    <div class="foter">
+        <p>ACTIVATE RESTRICTED MODE</p>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          </div>
+    </div>
+</div>
+
+<!-- fourth navbar  -->
+<!-- --device dropdown-- -->
+<div class="dropdown" id="location-arrow">
+    <div class="header">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div class="heading">appearance</div>
+    </div>
+    <ul>
+        <li><a href="#">Afrikaans</a></li>
+        <li><a href="#">Azərbaycan</a></li>
+        <li><a href="#">Bahasa Indonesia</a></li>
+        <li><a href="#">Bahasa Malaysia</a></li>
+        <li><a href="#">Bosanski</a></li>
+        <li><a href="#">Català</a></li>
+        <li><a href="#">Čeština</a></li>
+        <li><a href="#">Dansk</a></li>
+        <li><a href="#">Deutsch</a></li>
+        <li><a href="#">Eesti</a></li>
+        <li><a href="#">English (India)</a></li>
+        <li><a href="#">English (UK)</a></li>
+        <li><a href="#">English (US)</a></li>
+        <li><a href="#">Español (España)</a></li>
+        <li><a href="#">Español (Latinoamérica)</a></li>
+        <li><a href="#">Español (US)</a></li>
+        <li><a href="#">Euskara</a></li>
+    </ul>
+   
+</div>
+</div>
+</section>
+
+<!-- --side icon section--  -->
+<section id="side-icon">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="home icons-div">
+                    <div class="icon"><i class="fa-solid fa-home"></i></div>
+                    <div class="info">home</div>
+                </div>
+                <div class="shorts icons-div">
+                    <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="info">shorts</div>
+                </div>
+                <div class="subscribe icons-div">
+                    <div class="icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="info left">Subscriptions</div>
+                </div>
+                <div class="your icons-div">
+                    <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="info">you</div>
+                </div>
+                <div class="history icons-div">
+                    <div class="icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="info">history</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------------buttons top wrapper-------------------------- -->
+<section id="buttons">
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col">
+                <div class="button"><button class="btn button-top hovered">all</button></div>
+                <div class="button"><button class="btn button-top">mixes</button></div>
+                <div class="button"><button class="btn button-top">music</button></div>
+                <div class="button"><button class="btn button-top">raverberation</button></div>
+                <div class="button"><button class="btn button-top">bollywood music</button></div>
+                <div class="button"><button class="btn button-top">pashto music</button></div>
+                <div class="button"><button class="btn button-top">caremonies</button></div>
+                <div class="button"><button class="btn button-top">qawwali music</button></div>
+                <div class="button"><button class="btn button-top">adobe photoshop</button></div>
+                <div class="button"><button class="btn button-top">html</button></div>
+                <div class="button"><button class="btn button-top">live</button></div>
+                <div class="button"><button class="btn button-top">sono chanda</button></div>
+                <div class="button"><button class="btn button-top">comedy</button></div>
+                <div class="button"><button class="btn button-top">recently upload</button></div>
+                <div class="button"><button class="btn button-top">watched</button></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ------------video content wrapper---------------------  -->
+<section id="videos">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video1.jpg" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile1.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/vide03.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile16.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video4.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile2.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video5.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile3.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video8.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/pro-pic.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video9.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile5.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video10.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile6.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video11.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/pro-pic.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video12.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile16.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video13.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile2.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video14.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile3.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video15.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile5.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video16.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile1.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video17.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile2.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="image"><img src="images/video18.webp" alt=""></div>
+                    <div class="info-vide">
+                        <div class="profile-pic"><img src="images/profile6.jpg" alt=""></div>
+                        <div class="infor">
+                            <div class="title youtube-title">Complete Responsive Book Store Website Design With Admin Dashboard || HTML CSS JavaScript PHP MySQL</div>
+                            <div class="name">Mr. web designer <span><i class="fa-solid fa-circle-check"></i></span></div>
+                            <div class="views">32k views <div class="dot"></div><span>1 year ago</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+</main>
+  </body>
+</html>

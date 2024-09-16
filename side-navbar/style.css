@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all 0.6s linear;
+
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: all 0.6s linear;
+
+}
+.row{
+    padding: 0 2rem;
+}
+body{
+    background: #efefef;
+    padding-left: 25.5%;
+}
+header{
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0,0.8);
+
+}
+header nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+}
+header nav .logo{
+    /* border: 1px solid red; */
+    height: 30vh;
+    display: grid;
+    place-items: center;
+}
+header nav .navbar{
+    /* border: 1px solid red; */
+    height: 70vh;
+    display: grid;
+    place-items: center;
+}
+header nav .navbar ul{
+    display: grid;
+    grid-gap: 1.5rem;
+}
+header nav .navbar ul li a{
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #efefef;
+    letter-spacing: 5px;
+    transition: all 0.3s ease;
+}
+header nav .navbar ul li a.active{
+    color: red;
+}
+header nav .logo h1{
+    color: #efefef;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+/* -------.home---------- */
+.home{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.home .container .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.3rem;
+    place-items: center;
+}
+.home .container .row .col img{
+    width: 100%;
+}
+.home .container .row .col h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.home .container .row .col p{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 1rem 0;
+}
+.home .container .row .col .button a{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    background: black;
+    color: #fff;
+    border-radius: .5rem;
+}
+/* -------about---------- */
+
+.about{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.about .container .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.3rem;
+    place-items: center;
+}
+.about .container .row .col img{
+    width: 100%;
+}
+.about .container .row .col h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.about .container .row .col p{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 1rem 0;
+}
+.about .container .row .col .button a{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    background: black;
+    color: #fff;
+    border-radius: .5rem;
+}
+/* -------contact---------- */
+.contact{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.contact .container .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.3rem;
+    place-items: center;
+}
+.contact .container .row .col img{
+    width: 100%;
+}
+.contact .container .row .col h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.contact .container .row .col p{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 1rem 0;
+}
+.contact .container .row .col .button a{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    background: black;
+    color: #fff;
+    border-radius: .5rem;
+}
+/* -------services---------- */
+.services{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.services .container .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.3rem;
+    place-items: center;
+}
+.services .container .row .col{
+    border: 1px solid rgb(0,0,0,0.1);
+    padding: 1rem;
+}
+.services .container .row .col img{
+    width: 100%;
+}
+.services .container .row .col h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.services .container .row .col p{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 1rem 0;
+}
+.services .container .row .col .button a{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    background: black;
+    color: #fff;
+    border-radius: .5rem;
+}
+.items{
+    display: none;
+}
+.items.show{
+    display: block;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    transition: all 0.6s linear;
+}

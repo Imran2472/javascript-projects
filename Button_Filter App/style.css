@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background: #efefef;
+}
+.data_filter_main{
+    margin: 2rem 0;
+}
+.data_filter_main .container-fluid .filter_button{
+    display: grid;
+    grid-template-columns: 120px 199px 160px 125px 100px;
+    place-items: center;
+    place-content: center;
+    grid-gap: 1rem;
+}
+.data_filter_main .container-fluid .filter_button .buttons{
+    border: 1px solid black;
+    padding: .1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffff;
+    background: #000;
+    transition: all 0.3s linear;
+}
+.data_filter_main .container-fluid .filter_button .buttons.active{
+    background: blueviolet;
+}
+.data_filter_main .container-fluid .filter_button .buttons:hover{
+    background: blueviolet;
+}
+.data_filter_main .container-fluid .row .col-md-4 .card img{
+    width: 100%; 
+    height: 100%;
+    object-position: top center;
+    object-fit: cover;
+    transition: 2s linear;
+}
+.data_filter_main .container-fluid .row .col-md-4 .card:hover img{
+    object-position: bottom center;
+}
+.data_filter_main .container-fluid .row{
+    padding: 0 4rem;
+    margin-top: 2rem;
+}
+
+.data_filter_main .container-fluid .row .col-md-4{
+    padding: .5rem;
+   
+}
+
+.data_filter_main .container-fluid .row .col-md-4 .card{
+    height: 15rem;
+    border: 1px solid rgba(0,0,0,.6);
+    border-radius: .5rem;
+}

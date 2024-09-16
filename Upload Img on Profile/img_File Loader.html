@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chosse to File in Javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        body{
+            background: rgb(83, 185, 173);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        html{
+            overflow-x: hidden;
+        }
+        .wrapper_main{
+            border: 1px solid rgba(0,0,0,.1);
+            position: relative;
+            height: 10rem;
+            border-radius: 50%;
+            width: 10rem;
+            overflow: hidden;
+            background: rgba(255,255,255,.6);
+         
+        }
+        .wrapper_main img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 10rem;
+            border-radius: 50%;
+        
+
+        }
+        .wrapper_main .myfile{
+            position: absolute;
+            bottom: -5rem;
+            height: 4rem;
+            background: rgba(0,0,0,.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: transparent;
+         transition: 0.3s ease;
+        }
+        .wrapper_main:hover .myfile{
+            bottom: 0;
+        }
+      
+        .wrapper_main .myfile::-webkit-file-upload-button{
+            visibility: hidden;
+        }
+        .myfile::before{
+            content: '/f030';
+            font-family: FontAwesome;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        
+        }
+        .icone i{
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="wrapper_main">
+    <img src="images/02.jpeg" alt="" class="photo">
+    <input type="file" class="myfile">
+    <div class="icone"><i class="fab fa-solid fa-camera"></i></div>
+</div>
+
+
+
+<script>
+    let wrapper = document.querySelector('.wrapper_main')
+    let photo = document.querySelector('.photo')
+    let myfile = document.querySelector('.myfile')
+    let icone = document.querySelector('.icone')
+
+  myfile.addEventListener('change', function(){
+    let choosedFile = this.files[0];
+    if(choosedFile){
+        let reader = new FileReader();
+        reader.addEventListener('load', function(){
+            photo.setAttribute('src', reader.result);
+
+        });
+        reader.readAsDataURL(choosedFile);
+
+    }
+  });
+
+
+</script>
+
+    
+</body>
+</html>

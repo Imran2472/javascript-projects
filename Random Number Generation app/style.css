@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #1d1a4f;
+    height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+
+main section .container .row .col-md-6{
+    padding: 1rem ;
+    text-align: center;
+}
+.buttonss{
+    margin-top: 1rem;
+}

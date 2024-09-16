@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    text-transform: capitalize;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: #efefef;
+    background-color: var(--white-);
+}
+:root{
+    --black--:#2c2a2a;
+    --white-:#fefefe;
+    --gray--:#666;
+}
+.dark-them{
+    --black--:#fefefe;
+    --white-:#2c2c2c;
+    --gray--:#fff;
+}
+#main-sec{
+    margin: 5rem auto;
+}
+#main-sec .container{
+   
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+            linear-gradient(90deg, #ff2300 0%, #1038eb 100%);
+border-radius: 8px;
+padding: 9px;
+box-sizing: border-box;
+    padding: 1rem;
+    background: transparent;
+}
+#main-sec .container h3{
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--black--);
+    text-align: center;
+}
+#main-sec .container .row{
+    gap: 1rem;
+    padding: 0 2rem;
+}
+#main-sec .container p{
+    font-size: 1rem;
+    color:var(--gray--);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 300;
+}
+#main-sec .container .row .col{
+    border: .1rem solid rgba(0,0,0,.5);
+    flex-basis: 20%;
+    margin: 2rem 0;
+  height: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--black--);
+  font-size: 1.1rem;
+  font-weight: 400;
+
+}
+#main-sec .container .row #red{
+    background: red;
+}
+#main-sec .container .row #blue{
+    background: blue;
+}
+#main-sec .container .row #purple{
+    background:purple ;
+}
+#main-sec .container .row #yellow{
+    background:yellow;
+    color: var(--black--);
+}
+.toggle-dark{
+    position: fixed;
+    top: 1rem;
+    right: 4rem;
+}
+.toggle-dark .toggles{
+    width: 50px;
+    height: 25px;
+    border-radius: 320px;
+    background: #939191;
+    /* border: 1px solid rgba(0,0,0,.9); */
+    cursor: pointer;
+    position: relative;
+}
+.toggle-dark .toggles .circle.active{
+    top: 0;
+    right: 0;
+    left: auto;
+}
+.toggle-dark .toggles .circle{
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: .1rem solid transparent;
+    box-sizing: border-box;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipal Button Click Multipal Data shwo  </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: antiquewhite;
+            font-family: 'Mooli', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+        .butttons{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .butttons .main .button_wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .butttons .main{
+            width: 50%;
+            padding: 1rem;
+            background: #efefef;
+            border: rgb(0,0,0,.7);
+        }
+        .butttons .main .button_wrapper .btn{
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            padding: .5rem 2.6rem;
+            background: #078;
+            cursor: pointer;
+        }
+        .butttons .main .button_wrapper .btn.active{
+            background: rgb(0, 44, 51);
+        }
+        .butttons .main .container{
+            margin-top: 1rem;
+        }
+        .butttons .main .container .row .col h2{
+            font-size: 2rem;
+            font-weight: 600;
+            color: #078;
+        }
+        .butttons .main .container .row .col{
+            display: none;
+            transition: 0.3s ease;
+            animation: moving .6s ease;
+        }
+        @keyframes moving{
+            from{
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        .butttons .main .container .row .col.active{
+            display: block;
+
+        }
+        .butttons .main .container .row .col p{
+            font-size: 1rem;
+            font-weight: lighter;
+            color: rgb(0, 0, 0);
+            margin: .5rem 0;
+        }
+        .butttons .main .container .row .col .button{
+            margin: 1.6rem 0;
+        }
+        .butttons .main .container .row .col .button a{
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: .6rem 2rem;
+            background: #078;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    
+<section class="butttons">
+    <div class="main">
+    <div class="button_wrapper">
+        <div class="btn active">Home</div>
+        <div class="btn">About</div>
+        <div class="btn">Contact</div>
+        <div class="btn">Portfolio</div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col active"><h2>Home</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis maxime accusantium blanditiis molestiae, commodi corrupti, ipsum quasi placeat est quidem totam vel ipsa maiores.</p>
+            <div class="button"><a href="#">learn more</a></div>
+            </div>
+            <div class="col"><h2>About</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis maxime accusantium blanditiis molestiae, commodi corrupti, ipsum quasi placeat est quidem totam vel ipsa maiores</p>
+                <div class="button"><a href="#">learn more</a></div>
+                </div>
+            <div class="col"><h2>contact</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis maxime accusantium blanditiis molestiae, commodi corrupti, ipsum quasi placeat est quidem totam vel ipsa maiores.</p>
+            <div class="button"><a href="#">learn more</a></div>
+            </div>
+            <div class="col"><h2>portfolio</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis maxime accusantium blanditiis molestiae, commodi corrupti, ipsum quasi placeat est quidem totam vel ipsa maiores.</p>
+            <div class="button"><a href="#">learn more</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+<script>
+    let btn = document.querySelectorAll('.btn')
+    let col = document.querySelectorAll('.col')
+
+
+    btn.forEach((btns, index)=>{
+        btns.addEventListener('click', (e)=>{
+            btn.forEach(btns=>{btns.classList.remove('active')});
+         btns.classList.add('active')
+
+         col.forEach(col=>{col.classList.remove('active')})
+            col[index].classList.add('active')
+        });
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+

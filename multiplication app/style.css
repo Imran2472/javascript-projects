@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f0f0f0;
+    font-family: "Open Sans", sans-serif;
+}
+.container{
+    padding: 8rem 0;
+    /* border: 1px solid red; */
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+}
+.container .mult_app{
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    width: 40%;
+}
+.container .mult_app .button button{
+    text-transform: capitalize;
+}
+.container .mult_app .masg{
+    display: none;
+}
+.container .mult_app .masg.right{
+    display: block;
+    color: green;
+}
+.container .mult_app .masg.wrong{
+    color: red;
+    display: block;
+}
+
+@media(max-width :997px){
+    .container .mult_app{
+        width: 60%;
+    }
+}
+@media(max-width :771px){
+    .container .mult_app{
+        width: 80%;
+    }
+
+}
+@media(max-width :500px){
+    .container .mult_app{
+        width: 90%;
+    }
+}

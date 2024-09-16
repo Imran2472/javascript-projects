@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>project 01</title>
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #212121;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+form{
+    border: 1px solid rgba(255,255,255,.6);
+    padding: 1.5rem 2rem;
+}
+form input{
+    width: 100%;
+    padding: .8rem;
+    border: .1rem solid rgba(255,255,255,.6);
+    border-radius: .4rem;
+    margin: .2rem;
+}
+form .input_one{
+    margin: .5rem 0;
+}
+form .input_one span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+}
+form h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.header .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(17, 16, 16, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    transition: all .5s ease;
+}
+.header .popup.active{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header .popup .popup-content{
+    position: relative;
+    border: .1rem solid rgba(255,255,255,.6);
+    border-radius: .4rem;
+    text-align: center;
+    padding: 1.4rem 2rem;
+    color: #fff;
+}
+.header .popup .popup-content h1{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}.header .popup .popup-content .result{
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.header .popup .popup-content .close{
+    padding:.2rem .5rem;
+    background: rgba(49, 228, 76, 0.6);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.header .popup .popup-content .close i{
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+   </style>
+  </head>
+  <body>
+    <section class="header">
+    <form>
+        <h1>enter your height and weight </h1>
+        <div class="input_one">
+        <span>enter your height</span>
+        <input type="text" name="height" id="height" placeholder="enter your height">
+    </div>
+        <div class="input_one">
+        <span>enter your weight</span>
+        <input type="text" name="weight" id="weight" placeholder="enter your weight">
+    </div>
+    <button class="btn btn-success" id="submit" type="submit">submit now</button>
+    </form>
+    <div class="popup">
+        <div class="popup-content">
+        <div class="content">
+            <h1>your result ...</h1>
+            <div class="result">55.76</div>
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<script>
+    let submit = document.querySelector('#submit')
+    let closeIcon= document.querySelector('.close')
+    let popUp = document.querySelector('.popup')
+
+    submit.addEventListener('click', function(e){
+        e.preventDefault();
+        popUp.classList.add('active')
+
+        let height = document.querySelector('#height').value
+        let weight = document.querySelector('#weight').value
+        let result = document.querySelector('.result')
+        if(height == '' || height < 0 || isNaN(height)){
+            result.innerHTML = `Please Enter Your Valid Height`
+        }
+        else if(weight == '' || weight < 0 || isNaN(weight)){
+            result.innerHTML = `Please Enter Your Valid weight`
+        }
+        else{
+            let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+            result.innerHTML = `${bmi}`;
+        }
+
+
+
+
+
+    })
+    closeIcon.addEventListener('click', function(){
+        popUp.classList.remove('active')
+    })
+
+
+
+
+
+</script>
+  </body>
+</html>

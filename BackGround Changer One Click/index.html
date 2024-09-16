@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript demo</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            /* outline: 1px solid red; */
+            padding: 1rem;
+        }
+        .container .row{
+            display:  flex;
+            gap: 1rem;
+        }
+        .container .row .col{
+            outline: 1px solid rgb(0,0,0,.1);
+            width: 15rem;
+            height: 15em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            color: #000;
+            text-transform: capitalize;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+        .container .row .red{
+            background: red;
+        }
+        .container .row .purple{
+            background: purple;
+        }
+        .container .row .yellow{
+            background: yellow;
+        }
+        .container .row .orange{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col red" id="red">red</div>
+            <div class="col purple" id="purple">purple</div>
+            <div class="col yellow" id="yellow">yellow</div>
+            <div class="col orange" id="orange">orange</div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        let col = document.querySelectorAll('.col')
+        let body = document.querySelector('body')
+        col.forEach(function(col){
+            col.addEventListener('click', function(event){
+                console.log(event.target)
+                if(event.target = 'red'){
+                    body.style.backgroundColor = event.target.id;
+                }
+            })
+        })
+            
+    </script>
+
+</body>
+</html>

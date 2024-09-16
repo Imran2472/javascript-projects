@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none !important;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #D9E8FF;
+    font-family: "Laila", serif;
+}
+
+.container-fluid{
+    /* border: 1px solid red; */
+    padding: 12rem 1rem;
+}
+.container-fluid .row .col_timer{
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1.5rem 2rem;
+    width: 35%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container-fluid .row{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.container-fluid .row .col_timer .timer_display{
+    background-image: linear-gradient(90deg, #00ade5 0%, #070346 100%);
+    padding: 1rem 2rem;
+    color: #fff;
+    width: 110%;
+    position: absolute;
+    text-align: center;
+    top: 3.5rem;
+    left: -1.5rem;
+    right: 0;
+    font-size: 20px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+    .container-fluid .row .col_timer .buttons{
+        margin-top: 9rem;
+        display: flex;
+        gap: 7px;
+        align-items: center;
+    }
+    .container-fluid .row .col_timer .buttons button{
+        padding: 7px 18px;
+        /* color: #fff; */
+        background: #D9E8FF;
+        color:  #070346;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .container-fluid .row .col_timer .buttons button:hover,
+    .active{
+        background-image: linear-gradient(90deg, #00ade5 0%, #070346 100%);
+        color: #fff;
+        outline: none;
+        border: none;
+    }
+    .container-fluid .row .col_timer .buttons button.active{
+        background-image: linear-gradient(90deg, #00ade5 0%, #070346 100%);
+        color: #fff;
+        outline: none;
+        border: none;
+    }
+
+    @media (max-width : 786px){
+        .container-fluid .row .col_timer{
+            width: 55%;
+        }
+        .container-fluid .row .col_timer .timer_display{
+            left: -1.3rem;
+        }
+        .container-fluid{
+            /* border: 1px solid red; */
+            padding: 8rem 1rem;
+        }
+    }
+
+    @media (max-width : 546px){
+        .container-fluid .row .col_timer{
+            width: 85%;
+        }
+        .container-fluid .row .col_timer .timer_display{
+            position: relative;
+            left: auto;
+            right: auto;
+            top: 0;
+        }
+        .container-fluid{
+            /* border: 1px solid red; */
+            padding: 8rem 1rem;
+        }
+        .container-fluid .row .col_timer .buttons{
+            margin-top: 2rem;
+        }
+    }
+    @media (max-width : 400px){
+        .container-fluid .row {
+            padding: auto 1rem;
+        }
+        .container-fluid .row .col_timer{
+            width: 95%;
+        }
+    }

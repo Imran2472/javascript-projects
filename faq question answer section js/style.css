@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    /* border: 1px solid red; */
+    display: grid;
+    place-items: center;
+    padding: 5rem 10rem;
+}
+.container .faqs{
+    width: 60%;
+    /* border: 1px solid red; */
+    padding: 1rem;
+}
+.container .faqs .question_box{
+    transition: .4s ease;
+}
+.container .faqs .question_box .question {
+    padding: .8rem 1.2rem;
+    /* border: 1px solid red; */
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.container .faqs .question_box .question .titlee{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.container .faqs .question_box .question span i{
+    font-size: 1rem;
+    /* font-weight: bolder; */
+    color: #000;
+    transition: .4s ease;
+}
+.container .faqs .question_box .answer{
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: #0505059c;
+    display: none;
+    padding: .8rem 1.2rem;
+    transition: .5s linear;
+}
+.container .faqs .question_box.active{
+    transition: .4s linear;
+}
+.container .faqs .question_box.active .answer{
+    display: block;
+    background: #fff;
+    transition: .4s ease;
+}
+.container .faqs .question_box.active span i{
+   transform: rotate(180deg);
+}

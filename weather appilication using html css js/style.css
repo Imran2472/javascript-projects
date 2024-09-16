@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: "Ubuntu", sans-serif;
+}
+.container-fluid{
+    padding: 5rem 1rem;
+    background-image: url(images/home.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-fluid .box_weather{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+.container-fluid .box_weather .content_box{
+    width: 35%;
+    background: rgba(255,255,255,.1);
+    padding: 28px 25px;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+}
+.container-fluid .box_weather .content_box .search{
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 6px 8px;
+}
+.container-fluid .box_weather .content_box .search .input{
+    width: 90%;
+}
+.container-fluid .box_weather .content_box .search input{
+    width: 100%;
+    background: transparent;
+    padding: 2px 8px;
+    box-sizing: border-box;
+    color: rgba(255,255,255,.9);
+}
+.container-fluid .box_weather .content_box .search input::placeholder{
+    color: rgba(255,255,255,.9);
+}
+.container-fluid .box_weather .content_box .search input:focus{
+    background: transparent;
+}
+.container-fluid .box_weather .content_box .search .search_icon{
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(255,255,255,.9);
+    cursor: pointer;
+}
+.container-fluid .box_weather .content_box .search .icon{
+    color: rgba(255,255,255,.9);
+    cursor: pointer;
+}
+.container-fluid .box_weather .content_box .main_box{
+    margin-top: 30px;
+}
+.container-fluid .box_weather .content_box .main_box img{
+    width: 200px;
+    object-fit: cover;
+
+}
+.container-fluid .box_weather .content_box .main_box .temperature{
+    font-size: 45px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgba(255,255,255,.9);
+   line-height: 49px;
+   margin-top: 15px;
+}
+.container-fluid .box_weather .content_box .main_box .info{
+    font-size: 16px;
+    color: rgba(255,255,255,.9);
+    letter-spacing: 2px;
+}
+.container-fluid .box_weather .content_box .humi_wind{
+    margin-top: 35px;
+}
+.container-fluid .box_weather .content_box .humi_wind .humifity .icons i{
+    font-size: 40px;
+    color: rgba(255,255,255,.9);
+}
+.container-fluid .box_weather .content_box .humi_wind .humifity .dics .percent{
+    font-size: 20px;
+    color: rgba(255,255,255,.9);
+    font-weight: 500;
+    cursor: pointer;
+}
+.container-fluid .box_weather .content_box .humi_wind .humifity .dics .infos{
+    font-size: 19px;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgba(255,255,255,.9);
+}
+@media(max-width: 1110px){
+    .container-fluid .box_weather .content_box{
+        width: 40%;
+    }
+}
+@media(max-width: 1000px){
+    .container-fluid .box_weather .content_box{
+        width: 50%;
+    }
+}
+@media(max-width: 840px){
+    .container-fluid .box_weather .content_box{
+        width: 60%;
+    }
+    .container-fluid{
+        padding: 4rem 1rem;
+    }
+}
+@media(max-width: 700px){
+    .container-fluid .box_weather .content_box{
+        width: 70%;
+    }
+}
+@media(max-width: 600px){
+    .container-fluid .box_weather .content_box{
+        width: 100%;
+    }
+}
+@media(max-width: 435px){
+    
+    .container-fluid .box_weather .content_box .main_box .temperature{
+        font-size: 35px;
+    }
+    .container-fluid .box_weather .content_box .main_box .info{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    .container-fluid .box_weather .content_box .humi_wind .humifity .icons i{
+        font-size: 30px;
+    }
+    .container-fluid .box_weather .content_box .humi_wind .humifity .dics .percent{
+        font-size: 18px;
+    }
+}
+@media(max-width: 400px){
+    
+    .container-fluid .box_weather .content_box .humi_wind{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .container-fluid{
+        padding: 1rem 1rem;
+    }
+}

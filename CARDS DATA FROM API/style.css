@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    outline: none;
+    border: none;
+    text-transform: capitalize !important;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: "Inter Tight", sans-serif;
+    background: #eee;
+}
+#products{
+    padding: 50px 0;
+}
+#products .container-fluid .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .8rem;
+    padding: 0 3rem;
+}
+#products .container-fluid .row .col{
+    padding: 0;
+}
+#products .container-fluid .row .col .card{
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.132);
+}
+#products .container-fluid .row .col .card .title{
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: .4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#products .container-fluid .row .col .card .image img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+#products .container-fluid .row .col .card .disc{
+    font-size: 13px;
+    font-weight: 300;
+    color: #1e1e1ea3;
+    line-height: 17px;
+    margin: .6rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#products .container-fluid .row .col .card .price{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.611);
+}
+
+@media (max-width: 991px){
+    #products .container-fluid .row{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 1rem;
+    }
+}
+@media (max-width: 768px){
+    #products .container-fluid .row{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+    }
+}
+@media (max-width: 650px){
+    #products .container-fluid .row{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 1rem;
+    }
+}

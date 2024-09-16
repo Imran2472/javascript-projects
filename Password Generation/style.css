@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #f0f0f0;
+    font-family: "Laila", serif;
+}
+.buttons{
+    background-color: #D1E7DD;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #100202;
+}
+.curser{
+    cursor: pointer;
+}
+.container{
+    /* border: 1px solid red; */
+    padding: 6rem 0;
+    display: grid;
+    place-items: center;
+}
+.container .main_box{
+    width: 50%;
+    border: 1px solid red;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+}
+.container .main_box .box .input_field{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #D1E7DD;
+    border-radius: .5rem;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #100202;
+}
+.number{
+    width: 50px;
+    -webkit-appearance: none
+}
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.checkbox{
+    transform: scale(1.5);
+}
